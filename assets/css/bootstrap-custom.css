@@ -1,0 +1,261 @@
+/* Bootstrap Custom Overrides for SneakerHub */
+
+/* Button customizations */
+.btn {
+    border-radius: 0.35rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-lg {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* Form customizations */
+.form-control-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+}
+
+.form-control-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* Card customizations */
+.card {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, .15);
+}
+
+.card-header {
+    border-bottom: 1px solid #e3e6f0;
+    background-color: #f8f9fc;
+}
+
+/* Badge customizations */
+.badge-pill {
+    padding-right: 0.75em;
+    padding-left: 0.75em;
+    border-radius: 10rem;
+}
+
+/* Alert customizations */
+.alert {
+    border: none;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+/* Dropdown customizations */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, .15);
+    border-radius: 0.35rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fc;
+}
+
+/* Modal customizations */
+.modal-content {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, .2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #e3e6f0;
+    padding: 1.5rem;
+}
+
+/* Table customizations */
+.table thead th {
+    border-top: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Progress bar customizations */
+.progress {
+    border-radius: 0.35rem;
+    background-color: #eaecf4;
+}
+
+.progress-bar {
+    background-color: #4e73df;
+}
+
+/* Navbar customizations */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.35rem;
+}
+
+/* List group customizations */
+.list-group-item {
+    border: 1px solid #e3e6f0;
+    padding: 0.75rem 1.25rem;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: 0.35rem;
+    border-bottom-right-radius: 0.35rem;
+}
+
+/* Breadcrumb customizations */
+.breadcrumb {
+    background-color: #f8f9fc;
+    border-radius: 0.35rem;
+    padding: 0.75rem 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    color: #858796;
+}
+
+/* Custom utilities */
+.rounded-lg {
+    border-radius: 0.5rem !important;
+}
+
+.rounded-xl {
+    border-radius: 1rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Text utilities */
+.text-xs {
+    font-size: 0.7rem !important;
+}
+
+.text-sm {
+    font-size: 0.875rem !important;
+}
+
+.text-lg {
+    font-size: 1.25rem !important;
+}
+
+.text-xl {
+    font-size: 1.5rem !important;
+}
+
+.text-2xl {
+    font-size: 2rem !important;
+}
+
+/* Spacing utilities */
+.mt-6 {
+    margin-top: 4rem !important;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.py-6 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* Border utilities */
+.border-left-primary {
+    border-left: 0.25rem solid #4e73df !important;
+}
+
+.border-left-success {
+    border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-info {
+    border-left: 0.25rem solid #36b9cc !important;
+}
+
+.border-left-warning {
+    border-left: 0.25rem solid #f6c23e !important;
+}
+
+.border-left-danger {
+    border-left: 0.25rem solid #e74a3b !important;
+}
+
+/* Hover effects */
+.hover-shadow:hover {
+    box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, .2) !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Custom colors for Ethiopian theme */
+.bg-ethiopia-green {
+    background-color: #078930 !important;
+}
+
+.bg-ethiopia-yellow {
+    background-color: #fcd116 !important;
+}
+
+.bg-ethiopia-red {
+    background-color: #da121a !important;
+}
+
+.text-ethiopia-green {
+    color: #078930 !important;
+}
+
+.text-ethiopia-yellow {
+    color: #fcd116 !important;
+}
+
+.text-ethiopia-red {
+    color: #da121a !important;
+}

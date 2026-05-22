@@ -1,0 +1,53 @@
+RewriteEngine On
+RewriteBase /sneaker-commerce/
+
+# Prevent directory listing
+Options -Indexes
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+
+# Protect sensitive files
+<FilesMatch "^(config\.php|\.htaccess|composer\.json|composer\.lock)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect includes directory
+<FilesMatch "\.(php)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Allow access to includes from PHP files only
+<Directory "/sneaker-commerce/includes">
+    Order Deny,Allow
+    Deny from all
+</Directory>
+
+# Redirect to public folder
+RewriteCond %{REQUEST_URI} !^/sneaker-commerce/public/
+RewriteCond %{REQUEST_URI} !^/sneaker-commerce/assets/
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Custom error pages
+ErrorDocument 404 /sneaker-commerce/public/404.php
+ErrorDocument 403 /sneaker-commerce/public/403.php
+ErrorDocument 500 /sneaker-commerce/public/500.php
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Set cache headers for static assets
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js)$">
+    Header set Cache-Control "public, max-age=31536000"
+</FilesMatch>
